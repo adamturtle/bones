@@ -1,21 +1,13 @@
 /******************************************************************
-Theme Name: Bones
-Theme URI: http://www.themble.com/bones
-Description: This site was built using the Bones Development Theme. For more information about Bones or to view documentation, you can visit the <a href="http://themble.com/docs/" title="Bones Documentation">Bones Documentation</a> page. You can also view the conversation on Twitter by following the hashtag: <a href="http://twitter.com/#!/search/%23wpbones">#wpbones</a>.
-Author: Eddie Machado
-Author URI: http://www.themble.com/bones/
-Version: 1.09
+Theme Name: Main
+Description: Custom theme for client.
+Author: Adam Turtle
+Author URI: http://www.adamturtle.com/bones/
+Version: 1.0
 Tags: html5, css3, fixed, development, bones, h5bp
 
-License: GPL or whatever
+License: GPL
 License URI: http://www.gnu.org/copyleft/gpl.html
-
-All Default Styles are in library/css/normalize.css
-I reccommend not editing those files and making all
-changes here. That way if something goes awry, you
-can easily revert back to the original, but that's
-totally up to you. Happy Developing!
-******************************************************************/
 
 /******************************************************************
 GENERAL LAYOUT STYLES
@@ -36,21 +28,21 @@ GRID STYLES
 }
 	
 	/* layout options ( all have margins right & left of 2.1276596%) */
-	.col60  { width: 6.3829787%; } /* width 60px  / grid_1  */
-	.col140 { width: 14.893617%; } /* width 140px / grid_2  */
-	.col220 { width: 23.404255%; } /* width 220px / grid_3  */
-	.col300 { width: 31.914894%; } /* width 300px / grid_4  */
-	.col380 { width: 40.425532%; } /* width 380px / grid_5  */
-	.col480 { width: 51.06383%;  } /* width 480px / grid_6  */
-	.col540 { width: 57.446809%; } /* width 540px / grid_7  */
-	.col620 { width: 65.957447%; } /* width 620px / grid_8  */
-	.col700 { width: 74.468085%; } /* width 700px / grid_9  */
-	.col780 { width: 82.978723%; } /* width 780px / grid_10 */
-	.col860 { width: 91.489362%; } /* width 860px / grid_11 */
-	.col940 { width: 100.0%;     } /* width 940px / grid_12 */
+	.grid_1  { width: 6.3829787%; } /* width 60px  / grid_1  */
+	.grid_2 { width: 14.893617%; } /* width 140px / grid_2  */
+	.grid_3 { width: 23.404255%; } /* width 220px / grid_3  */
+	.grid_4 { width: 31.914894%; } /* width 300px / grid_4  */
+	.grid_5 { width: 40.425532%; } /* width 380px / grid_5  */
+	.grid_6 { width: 51.06383%;  } /* width 480px / grid_6  */
+	.grid_7 { width: 57.446809%; } /* width 540px / grid_7  */
+	.grid_8 { width: 65.957447%; } /* width 620px / grid_8  */
+	.grid_9 { width: 74.468085%; } /* width 700px / grid_9  */
+	.grid_10 { width: 82.978723%; } /* width 780px / grid_10 */
+	.grid_11 { width: 91.489362%; } /* width 860px / grid_11 */
+	.grid_12 { width: 100.0%;     } /* width 940px / grid_12 */
 	
 	/* layout & column defaults */
-	.col60, .col140, .col220, .col300, .col380, .col480, .col540, .col620, .col700, .col780, .col860, .col940 { 
+	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 { 
 		display: inline; 
 		float: left; 
 		position: relative;

@@ -130,7 +130,7 @@ So many changes...
 - added "embed, ruby, output" to the reset stylesheet based on
 	Eric Meyer's recent reset styles.
 - removed duplicate styles in reset & default stylesheet
-- fixed col460 and changed it to col480
+- fixed col460 and changed it to grid_6
 - added text-align styles to default stylesheet
 
 
