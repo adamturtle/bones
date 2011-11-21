@@ -23,8 +23,8 @@
 			echo ' - ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 		?></title>
 		
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta name="author" content="Adam Turtle">
 		
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
