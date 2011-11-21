@@ -87,7 +87,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .clearfix, nav[role=navigation] .menu ul { zoom: 1; }
 
 /* wordpress junk */
-.wp-smiley { margin: 0 !important; max-height: 1em; }
+.wp-smiley { margin: 0 !important; max-height: 1em; border:none; }
 
 				
 /******************************************************************
