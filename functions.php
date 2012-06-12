@@ -11,13 +11,13 @@ sidebars, comments, ect.
 // Get Bones Core Up & Running!
 require_once('library/bones.php');            // core functions (don't remove)
 require_once('library/plugins.php');          // plugins & extra functions (optional)
-require_once('library/custom-post-type.php'); // custom post type example
+//require_once('library/custom-post-type.php'); // custom post type example
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+// add_image_size( 'bones-thumb-600', 600, 150, true );
+// add_image_size( 'bones-thumb-300', 300, 100, true );
 /* 
 to add more sizes, simply copy a line from above 
 and change the dimensions & name. As long as you
@@ -118,4 +118,24 @@ function bones_wpsearch($form) {
 } // don't remove this bracket!
 
 
-?>
+
+
+/* =CUSTOM
+---------------------------------------*/
+
+function load_css(){
+    global $tf;
+    $tf->css(array(
+        //'library/css/bootstrap.css'
+    ));
+}
+add_action('wp_enqueue_scripts', 'load_css');
+
+function load_js(){
+    global $tf;
+    $tf->js(array(
+        //'library/js/libs/slides.min.jquery.js'
+    ));
+}
+add_action('wp_enqueue_scripts', 'load_js');
+

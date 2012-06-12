@@ -8,7 +8,7 @@
 						
 						<header>
 							
-							<h1>Epic 404 - Article Not Found</h1>
+							<h1>Article Not Found – 404</h1>
 						
 						</header> <!-- end article header -->
 					
