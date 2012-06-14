@@ -117,7 +117,25 @@ function bones_wpsearch($form) {
     return $form;
 } // don't remove this bracket!
 
+// Google Analytics
+function bones_google_analytics(){
+    if( defined("GOOGLE_ANALYTICS_ID") ){
+        $o = null;
+        $o.= '<script type="text/javascript">';
+        $o.= "var _gaq = _gaq || [];";
+        $o.= "_gaq.push(['_setAccount', '". GOOGLE_ANALYTICS_ID ."']);";
+        $o.= "_gaq.push(['_trackPageview']);";
 
+        $o.= '(function() {';
+        $o.= "  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;";
+        $o.= "  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';";
+        $o.= "  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);";
+        $o.= "})();";
+        $o.= '</script>';
+        echo $o;
+    }
+}
+add_action('wp_footer', 'bones_google_analytics');
 
 
 /* =CUSTOM
