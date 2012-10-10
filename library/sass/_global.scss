@@ -1,0 +1,170 @@
+/* General styles
+---------------------------------*/
+
+body { 
+	background: #fff; 
+}
+
+/* Links
+ ---------------------------------*/
+
+a, a:visited {
+
+}
+
+a:hover, a:focus { 
+
+}
+
+a:active {
+	
+}
+
+a:link { 
+	-webkit-tap-highlight-color : rgba(0,0,0,0); /* this highlights links on Iphones / iPads */ 
+}
+
+
+/* Highlighting
+---------------------------------*/
+::selection { 
+	background: #6fc2f6; 
+	color:#fff; 
+	text-shadow : none; 
+}
+
+/* Firefox */
+::-moz-selection { 
+	background: #6fc2f6; 
+	color:#fff; 
+	text-shadow : none; 
+}
+
+
+/* Headings
+---------------------------------*/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 { 
+
+}
+
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a { 
+	text-decoration: none; 
+}
+
+
+/* Post content
+---------------------------------*/
+
+.post_content {
+	p { 
+		margin: 0 0 1.5em 0; 
+		line-height: 1.5em; 
+	}
+	ul,  ol,  table,  dl { 
+		margin: 1.5em 0; 
+	}
+	ul,  ol { 
+		list-style-position:outside; 
+		line-height:1.5; 
+	}
+	li { 
+		margin-bottom: 0.75em; 
+	}
+	ul li { 
+		list-style-type: disc; 
+	}
+	ol li { 
+		list-style-type: decimal; 
+	}
+	
+	blockquote { 
+		font-style:italic; 
+		line-height:1.6em; 
+		margin: 1.5em 2.2em; 
+	}
+	
+	blockquote:before { 
+		font-family:Georgia, serif; 
+		content: "“"; 
+		font-size:2.75em; 
+		text-indent:-.8em; 
+		margin-top:.1em; 
+		float:left; 
+		opacity:.3; 
+	} /* this adds the quote before the blockquote */
+	
+	dl { 
+		margin:1.75em 0 1.75em; 
+	}
+	dt { 
+		margin-top: 1.25em; 
+		font-weight:700; 
+	}
+	dd { 
+		font-style: italic; 
+		margin-top:0.5em; 
+		line-height:1.6em; 
+	}
+	
+	img { 
+		margin: 0 0 1.5em 0; 
+		max-width: 100%; 
+	}
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+	
+	video { 
+		margin: 1.5em 0; 
+		max-width: 100%; 
+		display: block; 
+	}
+	
+	object { 
+		display: block; 
+		margin: 1.5em 0; 
+		max-width: 100%; 
+	}	
+}
+
+.hentry footer { 
+	clear: both; 
+	margin: 1.5em 0 0; 
+	padding-bottom: 2.2em; 
+}
+
+/* Helper
+---------------------------------*/
+
+/* floats */
+.left { float: left; }
+.right { float: right; }
+
+/* text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* highlighting search term on search page */
+mark, .search-term { background: #EBE16F; }
+
+/* alerts & notices */
+.help, .info, .error, .success { margin: 10px; padding: 5px 18px; border: 1px solid #cecece; }
+.help { border-color: #E0C618; background: #EBE16F; }
+.info { border-color: #92cae4; background: #d5edf8; }
+.error { border-color: #fbc2c4; background: #fbe3e4; }
+.success { border-color: #c6d880; background: #e6efc2; } 

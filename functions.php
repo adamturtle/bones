@@ -1,42 +1,9 @@
 <?php
-/*
-Author: Eddie Machado
-URL: htp://themble.com/bones/
-
-This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images, 
-sidebars, comments, ect.
-*/
 
 // Get Bones Core Up & Running!
 require_once('library/bones.php');            // core functions (don't remove)
 require_once('library/plugins.php');          // plugins & extra functions (optional)
 //require_once('library/custom-post-type.php'); // custom post type example
-
-/************* THUMBNAIL SIZE OPTIONS *************/
-
-// Thumbnail sizes
-// add_image_size( 'bones-thumb-600', 600, 150, true );
-// add_image_size( 'bones-thumb-300', 300, 100, true );
-/* 
-to add more sizes, simply copy a line from above 
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 300 sized image, 
-we would use the function:
-<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-for the 600 x 100 image:
-<?php the_post_thumbnail( 'bones-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
 
 /************* ACTIVE SIDEBARS ********************/
 
@@ -51,31 +18,7 @@ function bones_register_sidebars() {
     	'before_title' => '<h4 class="widgettitle">',
     	'after_title' => '</h4>',
     ));
-    
-    /* 
-    to add more sidebars or widgetized areas, just copy
-    and edit the above sidebar code. In order to call 
-    your new sidebar just use the following code:
-    
-    Just change the name to whatever your new
-    sidebar's id is, for example:
-    
-    register_sidebar(array(
-    	'id' => 'sidebar2',
-    	'name' => 'Sidebar 2',
-    	'description' => 'The second (secondary) sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
-    To call the sidebar in your template, you can just copy
-    the sidebar.php file and rename it to your sidebar's name.
-    So using the above example, it would be:
-    sidebar-sidebar2.php
-    
-    */
+ 
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
@@ -141,19 +84,17 @@ add_action('wp_footer', 'bones_google_analytics');
 /* =CUSTOM
 ---------------------------------------*/
 
-function load_css(){
-    global $tf;
-    $tf->css(array(
-        //'library/css/bootstrap.css'
-    ));
-}
-add_action('wp_enqueue_scripts', 'load_css');
-
-function load_js(){
-    global $tf;
-    $tf->js(array(
-        //'library/js/libs/slides.min.jquery.js'
-    ));
-}
-add_action('wp_enqueue_scripts', 'load_js');
-
+add_action( 'wp_enqueue_scripts', function() {
+	
+	// Load CSS
+	bones_load_css(array(
+		'library/css/bootstrap.min.css',
+		'library/css/bootstrap-responsive.min.css'
+	));
+	
+	// Load Js
+	bones_load_js(array(
+		'library/js/libs/bootstrap.min.js'
+	));
+	
+});

@@ -1,0 +1,12 @@
+// Variables
+
+$link: #FF0000;
+$link_hover: #FF6666;
+
+
+// Mixins
+
+@mixin title(){
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}

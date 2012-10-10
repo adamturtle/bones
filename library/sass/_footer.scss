@@ -1,0 +1,33 @@
+/* Footer
+---------------------------------*/
+
+#footer {
+	
+	/* footer menu */
+	nav { 
+		float: left; margin: 1em 0; 
+	}	
+	
+	.footer-links ul li { 
+		list-style-type: none; 
+		float: left; 
+		font-size: 0.9em; 
+		
+		a {
+			margin-right: 10px; 
+			text-decoration: underline;
+		}
+		
+		&:last-child a {
+			margin-right: 0;
+		}
+		
+		.sub-menu {
+			display: none;
+		}
+	}	
+								
+	.attribution { 
+	}
+
+}

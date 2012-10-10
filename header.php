@@ -15,12 +15,12 @@
 		 * Print the <title> tag based on what is being viewed.
 		 */
 		global $page, $paged;
-		wp_title( '-', true, 'right' );
+		wp_title( '|', true, 'right' );
 		// Add the blog name.
 		bloginfo( 'name' );
 		// Add a page number if necessary:
 		if ( $paged >= 2 || $page >= 2 )
-			echo ' - ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
+			echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 		?></title>
 		
 		<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -54,20 +54,20 @@
 	
 	<body <?php body_class(); ?>>
 	
-		<div id="container">
+		<div id="container" class="container">
 			
 			<header role="banner">
 			
-				<div id="inner-header" class="clearfix">
+				<div id="inner-header" class="clearfix row">
 					
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<p id="logo" class="h1 span4">
+						<a href="<?php echo home_url(); ?>" rel="nofollow">
+							<?php bloginfo('name'); ?>							
+							<!-- <img src="<?php echo get_template_directory_uri(); ?>/library/images/logo.png" alt="<?php bloginfo('name'); ?> logo" /> -->
+						</a>
+					</p>
 					
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-					
-					
-					<nav role="navigation">
+					<nav role="navigation" class="span8">
 						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 				

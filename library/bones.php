@@ -185,7 +185,7 @@ function page_navi($before = '', $after = '') {
 	if($start_page <= 0) {
 		$start_page = 1;
 	}
-	echo $before.'<nav class="page-navigation"><ol class="bones_page_navi clearfix">'."";
+	echo $before.'<nav class="page-navigation pagination"><ol class="bones_page_navi clearfix">'."";
 	if ($start_page >= 2 && $pages_to_show < $max_page) {
 		$first_page_text = "First";
 		echo '<li class="bpn-first-page-link"><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
@@ -209,6 +209,61 @@ function page_navi($before = '', $after = '') {
 	}
 	echo '</ol></nav>'.$after."";
 }
-	
 
-?>
+/** 
+ * Load js
+ */	
+function bones_load_js( $scripts = null ){
+	if( $scripts && ! is_admin() ){		
+		foreach($scripts as $script){
+			if( substr($script, 0, 4 ) == "http" ){
+				$url = $script;
+			}			
+			$script = explode( '/', $script );
+			$array_len = count( $script );
+			$filename = str_replace('.js', '' , $script[$array_len - 1]);
+			
+			if( $url ){
+				wp_register_script( $filename , $url);
+				$url = null;
+			} else {				
+				$path = implode('/', str_replace('.js', '' , $script));
+				wp_register_script( $filename , get_template_directory_uri() . '/' . $path . '.js', null, null, true);
+			}
+			wp_enqueue_script( $filename );		
+		}
+	}
+}
+
+/**
+ * Load CSS
+ */
+function bones_load_css( $styles = null ){
+	if( $styles && ! is_admin() ){		
+		foreach($styles as $style){
+			if( substr($style, 0, 4 ) == "http" ){
+				$url = $style;
+			}
+			
+			$style = explode( '/', $style );
+			$array_len = count( $style );
+			$filename = str_replace('.css', '' , $style[$array_len - 1]);
+			if( $url ){
+				wp_register_style( $filename , $url);				
+				$url = null;					
+			} else {
+				$path = implode('/', str_replace('.css', '' , $style));
+				wp_register_style( $filename , get_template_directory_uri() . '/' . $path . '.css');				
+			}
+			wp_enqueue_style( $filename );		
+		}
+	}
+}
+
+/**
+ * Set Permalinks
+ */
+ add_action( 'init', function() {
+ 	global $wp_rewrite;
+ 	$wp_rewrite->set_permalink_structure( '/%year%/%monthnum%/%postname%/' );
+ } );

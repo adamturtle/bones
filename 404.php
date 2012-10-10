@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="grid_8 left first clearfix" role="main">
+				<div id="main" class="span8 left first clearfix" role="main">
 
 					<article id="post-not-found" class="clearfix">
 						
 						<header>
 							
-							<h1>Article Not Found – 404</h1>
+							<h1>404</h1>
 						
 						</header> <!-- end article header -->
 					

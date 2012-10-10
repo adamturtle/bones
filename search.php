@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="grid_9 left first clearfix" role="main">
+				<div id="main" class="span9 left first clearfix" role="main">
 				
 					<h1 class="archive_title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
 

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix">
+			<div id="content" class="clearfix row">
 			
-				<div id="main" class="grid_8 left first clearfix" role="main">
+				<div id="main" class="span8 left first clearfix" role="main">
 				
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
