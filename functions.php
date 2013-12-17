@@ -98,3 +98,11 @@ add_action( 'wp_enqueue_scripts', function() {
 	));
 	
 });
+
+// Add page class to body class
+function at_add_page_class($content){
+   global $post;
+   $content[] = $page = 'page-' . $post->post_name;
+   return $content;
+}
+add_filter('body_class','at_add_page_class');
