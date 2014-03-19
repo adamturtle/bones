@@ -14,43 +14,43 @@ single-bookmarks.php
 ?>
 
 <?php get_header(); ?>
-			
+
 			<div id="content" class="clearfix">
-			
-				<div id="main" class="grid_8 left first clearfix" role="main">
+
+				<div id="main" class="col-md-8 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
+
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						
+
 						<header>
-							
+
 							<h1><?php the_title(); ?></h1>
-							
+
 							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php echo get_the_term_list( get_the_ID(), 'custom_cat', "" ) ?>.</p>
-						
+
 						</header> <!-- end article header -->
-					
+
 						<section class="post_content clearfix">
-							
+
 							<?php the_content(); ?>
-					
+
 						</section> <!-- end article section -->
-						
+
 						<footer>
-			
+
 							<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tags', '<span class="tags-title">Custom Tags:</span> ', ', ' ) ?></p>
-							
+
 						</footer> <!-- end article footer -->
-					
+
 					</article> <!-- end article -->
-					
+
 					<?php comments_template(); ?>
-					
-					<?php endwhile; ?>			
-					
+
+					<?php endwhile; ?>
+
 					<?php else : ?>
-					
+
 					<article id="post-not-found">
 					    <header>
 					    	<h1>Not Found</h1>
@@ -61,13 +61,13 @@ single-bookmarks.php
 					    <footer>
 					    </footer>
 					</article>
-					
+
 					<?php endif; ?>
-			
+
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
-    
+
+				<?php //get_sidebar(); // sidebar 1 ?>
+
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
