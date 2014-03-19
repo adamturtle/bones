@@ -1,0 +1,20 @@
+@import 'compass';
+
+@import 'partials/mixins-vars';
+
+@import '../vendor/bootstrap.3.1.1.min.css';
+@import '../vendor/font-awesome.min.css';
+@import 'partials/global';
+@import 'partials/header';
+@import 'partials/nav';
+@import 'partials/sidebar';
+@import 'partials/footer';
+@import 'partials/blog';
+@import 'partials/single';
+@import 'partials/comments';
+@import 'partials/page';
+@import 'partials/category';
+@import 'partials/404';
+@import 'partials/home';
+
+@import 'partials/mq-tablet';

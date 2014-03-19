@@ -17,12 +17,12 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	// Load CSS
 	bones_load_css(array(
-    	'css/vendor/bootstrap.3.1.1.min.css'
+    	//'css/vendor/bootstrap.3.1.1.min.css'
 	));
 
 	// Load JS
 	bones_load_js(array(
-		'js/vendor/bootstrap.3.1.1.min.js'
+		//'js/vendor/bootstrap.3.1.1.min.js'
 	));
 
 });

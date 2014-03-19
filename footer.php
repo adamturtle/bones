@@ -15,7 +15,7 @@
 		</div> <!-- end #container -->
 
 		<!-- scripts are now optimized via Modernizr.load -->
-		<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/generated/scripts.min.js"></script>
 
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

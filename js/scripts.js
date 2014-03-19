@@ -6,5 +6,4 @@ Modernizr.load([
 ]);
 $(document).ready(function() {
 
-
 }); // end doc.ready
